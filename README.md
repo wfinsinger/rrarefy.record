@@ -24,6 +24,10 @@ the function creates an output directory in the working directory. The new direc
   - a .csv file with the richness, diversity and evenness estimates,
   - a pdf file with an output figure.
 
+Dependencies
+---
+The function uses the rrarefy() function from the 'vegan' package (Oksanen et al. 2016) to draw random samples without replacement.
+
 ----------------------------------------------------------------------------------------
 References:
 ---
@@ -32,3 +36,5 @@ Birks, H.J.B., Felde, V.A., Bjune, A.E., Grytnes, J.-A., Seppä, H., Giesecke, T
 Finsinger, W., Morales-Molino, C., Gałka, M., Valsecchi, V., Bojovic, S., Tinner, W., 2017. Holocene vegetation and fire dynamics at Crveni Potok, a small mire in the Dinaric Alps (Tara National Park, Serbia). Quaternary Science Reviews 167, 63–77. http://dx.doi.org/10.1016/j.quascirev.2017.04.032
 
 Hill, M.O., 1973. Diversity and Evenness: A Unifying Notation and Its Consequences. Ecology 54, 427–432.
+
+Oksanen, J., Blanchet, G.B., Friendly, M., Kindt, R., Legendre, P., McGlinn, D., Minchin, P.R., O’Hara, R.B., Simpson, G.L., Solymos, P., Stevens, M.H.H., Szoecs, E., Wagner, H., 2016. vegan: Community Ecology Package. R package version 2.4-1.
