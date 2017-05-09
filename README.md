@@ -6,9 +6,10 @@ For additional details, please refer to Finsinger et al. (2017), or contact me d
 The R function requires a data.frame and input parameters:
 ---
 One data.frame formatted as:
-  Column 1: sample depths
-  Column 2: sample ages
-  Columns 3-n: counts for n taxa
+--
+  - Column 1: sample depths
+  - Column 2: sample ages
+  - Columns 3-n: counts for n taxa
 
 Input parameters:
 --
