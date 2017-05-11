@@ -37,4 +37,4 @@ Finsinger, W., Morales-Molino, C., Gałka, M., Valsecchi, V., Bojovic, S., Tinne
 
 Hill, M.O., 1973. Diversity and Evenness: A Unifying Notation and Its Consequences. Ecology 54, 427–432. http://onlinelibrary.wiley.com/doi/10.2307/1934352/abstract
 
-Oksanen, J., Blanchet, G.B., Friendly, M., Kindt, R., Legendre, P., McGlinn, D., Minchin, P.R., O’Hara, R.B., Simpson, G.L., Solymos, P., Stevens, M.H.H., Szoecs, E., Wagner, H., 2016. vegan: Community Ecology Package. R package version 2.4-1. https://CRAN.R-project.org/package=vegan
+Oksanen, J., Blanchet, G.B., Friendly, M., Kindt, R., Legendre, P., McGlinn, D., Minchin, P.R., O’Hara, R.B., Simpson, G.L., Solymos, P., Stevens, M.H.H., Szoecs, E., Wagner, H., 2017. vegan: Community Ecology Package. R package version 2.4-1. https://CRAN.R-project.org/package=vegan
