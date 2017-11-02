@@ -23,9 +23,10 @@ Output:
 The function creates an output to the Environment.
 An output figure can be plotted using the dedicated plotting function.
 
+
 For instance:
-rar <- rrarefy.record(data)
-plot(rar)
+  > rar <- rrarefy.record(data)
+  > plot(rar)
 
 
 Dependencies
