@@ -4,7 +4,7 @@
 
 
 ## Define function ####
-`rrarefy.record` <-
+rrarefy.record <-
   function (counts.file, site.name, zones=NULL, n.random=1000)
   {
     
@@ -12,9 +12,6 @@
     require(vegan) # to use function rrarefy()
     require(scales) # for transparency of layers
     
-    # Define and create output directory
-    output.dir <- "./Out/"
-    dir.create(output.dir)
     
     # Define input data and input parameter
     x <- counts.file[ ,3:ncol(counts.file)]
@@ -95,16 +92,27 @@
     
     rm(N0.r, N1.r, N2.r, st.dev, n.random)
     
-    ## Add depth and age scales, and save data.frame 'y' as .csv file in output directory
+    ## Add depth and age scales
     y$depth <- scale.depth
     y$age <- scale.age
     y <- y[ ,c(14,15,1:13)]
     
-    write.csv(y, file=paste0(output.dir, "richness_diversity.csv"), row.names=F)
-    
+    ## Return 'y' to Environment with other data useful for plotting
+    output <- list(site.name=site.name, depth=scale.depth, age=scale.age, zones=zones, rrarefied=y)
+    class(output) <- "rrarefy"
+    return(output)
+  }
     
     ## Make plots ####
-    pdf(file.path(output.dir, "Figure 1.pdf"))
+  
+  plot.rrarefy <- function(x, site.name, zones, ...) {  
+  
+  y <- x$rrarefied
+  site.name <- y$site.name
+  x.depth <- c(max(y$depth), min(y$depth))
+  x.age <- c(max(y$age), min(y$age))
+  zones <- y$zones
+  
     par(mfrow=c(2,1), mar=c(0.2,3.5,1,0), oma=c(5,0.5,0.5,2))
     plot(y$age, y$N0, xlim=x.age, ylim=c(5,35), type="l", ylab="", axes=F, col="red", lwd=2, main=site.name)
     polygon(x=c(y$age, rev(y$age)), y=c(y$N0.uci, rev(y$N0.lci)), col=alpha("red", 0.3), border=F)
@@ -127,6 +135,5 @@
     abline(v=zones, col="grey")
     axis(1, labels=T)
     mtext("Age (cal yrs BP)", side=1, line=2)
-    dev.off()
     
   }
