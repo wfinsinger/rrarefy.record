@@ -13,16 +13,20 @@ One data.frame formatted as:
 
 Input parameters:
 --
-  - counts.file = name of the data.frame
+  - counts.file = name of the data.frame.
   - site.name = site name
   - zones = zone boundaries. By default zones=NULL
   - n.random = number of samples taken randomly and without replacement. By default n.random=1000
   
 Output:
 ---
-the function creates an output directory in the working directory. The new directory will contain:
-  - a .csv file with the richness, diversity and evenness estimates,
-  - a pdf file with an output figure.
+The function creates an output to the Environment.
+An output figure can be plotted using the dedicated plotting function.
+
+For instance:
+rar <- rrarefy.record(data)
+plot(rar)
+
 
 Dependencies
 ---
