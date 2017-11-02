@@ -26,6 +26,7 @@ An output figure can be plotted using the dedicated plotting function.
 
 For instance:
   > rar <- rrarefy.record(data)
+  
   > plot(rar)
 
 
