@@ -108,13 +108,15 @@ rrarefy.record <-
   plot.rrarefy <- function(x, site.name, zones, ...) {  
   
   y <- x$rrarefied
-  site.name <- y$site.name
+  site.name <- x$site.name
   x.depth <- c(max(y$depth), min(y$depth))
   x.age <- c(max(y$age), min(y$age))
-  zones <- y$zones
+  zones <- x$zones
+  y.lim.up <- max(y$N0) * 1.4
+  y.lim.lo <- min(y$N2)
   
     par(mfrow=c(2,1), mar=c(0.2,3.5,1,0), oma=c(5,0.5,0.5,2))
-    plot(y$age, y$N0, xlim=x.age, ylim=c(5,35), type="l", ylab="", axes=F, col="red", lwd=2, main=site.name)
+    plot(y$age, y$N0, xlim=x.age, ylim=c(y.lim.lo,y.lim.up), type="l", ylab="", axes=F, col="red", lwd=2, main=site.name)
     polygon(x=c(y$age, rev(y$age)), y=c(y$N0.uci, rev(y$N0.lci)), col=alpha("red", 0.3), border=F)
     lines(y$age, y$N1, xlim=x.age, type="l", ylab="N1", col="blue", lwd=2)
     polygon(x=c(y$age, rev(y$age)), y=c(y$N1.uci, rev(y$N1.lci)), col=alpha("blue", 0.3), border=F)
