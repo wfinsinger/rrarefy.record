@@ -17,17 +17,24 @@ Input parameters:
   - site.name = site name
   - zones = zone boundaries. By default zones=NULL
   - n.random = number of samples taken randomly and without replacement. By default n.random=1000
+
+To run the analysis simply:
+ # Load the R script into the R Environment:
+  > source("rrarefy.record.r")
   
+ # Load the data file into the R Environment:
+  > my.data <- read.csv("my_data.csv")
+  
+ # Run the rrarefy.record analysis:
+  > my.data.rar <- rrarefy.record(my_data, site.name="My Site")
+
+
 Output:
 ---
 The function creates an output to the Environment.
-An output figure can be plotted using the dedicated plotting function.
 
-
-For instance:
-  > rar <- rrarefy.record(data)
-  
-  > plot(rar)
+An output figure can be plotted using the dedicated plotting function:
+  > plot(my.data.rar)
 
 
 Dependencies
@@ -37,7 +44,7 @@ The function uses the rrarefy() function from the 'vegan' package (Oksanen et al
 ----------------------------------------------------------------------------------------
 References:
 ---
-Birks, H.J.B., Felde, V.A., Bjune, A.E., Grytnes, J.-A., Seppä, H., Giesecke, T., 2016. Does pollen-assemblage richness reflect       floristic richness? A review of recent developments and future challenges. Review of Palaeobotany and Palynology 228, 1–25. http://dx.doi.org/10.1016/j.revpalbo.2015.12.011
+Birks, H.J.B., Felde, V.A., Bjune, A.E., Grytnes, J.-A., Seppä, H., Giesecke, T., 2016. Does pollen-assemblage richness reflect floristic richness? A review of recent developments and future challenges. Review of Palaeobotany and Palynology 228, 1–25. http://dx.doi.org/10.1016/j.revpalbo.2015.12.011
 
 Finsinger, W., Morales-Molino, C., Gałka, M., Valsecchi, V., Bojovic, S., Tinner, W., 2017. Holocene vegetation and fire dynamics at Crveni Potok, a small mire in the Dinaric Alps (Tara National Park, Serbia). Quaternary Science Reviews 167, 63–77. http://dx.doi.org/10.1016/j.quascirev.2017.04.032
 
