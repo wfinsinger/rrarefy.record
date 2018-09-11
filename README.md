@@ -20,14 +20,15 @@ Input parameters:
 
 To run the analysis simply:
 --
-  # Load the R script into the R Environment:
-  > source("rrarefy.record.r")
+
+# Load the R script into the R Environment:
+> source("rrarefy.record.r")
   
-  # Load the data file into the R Environment:
-  > my.data <- read.csv("my_data.csv")
+# Load the data file into the R Environment:
+> my.data <- read.csv("my_data.csv")
   
-  # Run the rrarefy.record analysis:
-  > my.data.rar <- rrarefy.record(my_data, site.name="My Site")
+# Run the rrarefy.record analysis:
+> my.data.rar <- rrarefy.record(my_data, site.name="My Site")
 
 
 Output:
@@ -35,7 +36,7 @@ Output:
 The function creates an output to the Environment.
 
 An output figure can be plotted using the dedicated plotting function:
-  > plot(my.data.rar)
+> plot(my.data.rar)
 
 
 Dependencies
