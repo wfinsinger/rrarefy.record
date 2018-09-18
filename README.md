@@ -21,10 +21,10 @@ Input parameters:
 To run the analysis simply:
 --
 
-# Load the R script into the R Environment:
+### Load the R script into the R Environment:
 > source("rrarefy.record.r")
   
-## Load the data file into the R Environment:
+### Load the data file into the R Environment:
 > my.data <- read.csv("my_data.csv")
   
 ### Run the rrarefy.record analysis:
